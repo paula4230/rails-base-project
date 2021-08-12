@@ -6,9 +6,10 @@
     <%= form.hidden_field :current_price, value: @current_price, class: 'form-control' %>
 
     <%# <%= label_tag.hidden_field :count_shares, 'Number of Shares to Sell'%>
+    <%= form.number_field :latest_price, value: @current_market_price, class: 'form-control' %>
     <%= form.hidden_field :count_shares, value: (@count_shares.to_i * -1), class: 'form-control' %>
 
-    <%= form.hidden_field :total_price, value: @result, class: 'form-control' %>
+    <%= form.number_field :total_price, value: @result, class: 'form-control' %>
 
     <%= form.hidden_field :user_id, id: :transaction_user_id, value: current_user.id, class: 'form-control' %>
 

@@ -21,6 +21,33 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bank_name %><br />
+    <%= f.text_field :bank_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bank_account_number %><br />
+    <%= f.text_field :bank_account_number, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :account_balance %><br />
+    <%= f.number_field :account_balance, value: 5000, autofocus: true %>
+  </div>
+
+  <br>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

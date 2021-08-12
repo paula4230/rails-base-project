@@ -8,6 +8,10 @@
       <%= link_to 'Transactions', transactions_path %>   
       </div>  
     </div>
+    <div id="account_balance">
+      <%= current_user.account_balance %>
+    </div> 
+
   <%else%>
     <% @users.each do |user| %>
       <%= user.email %>

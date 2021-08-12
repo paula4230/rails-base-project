@@ -14,8 +14,11 @@ class TransactionsController < ApplicationController
 
     def buy_stock
         @transaction = current_user.transactions.build(transaction_params)
+        @user = User.where(id: current_user.id)
+
+        new_balance = current_user.account_balance - transaction_params[:total_price].to_f
     
-        if @transaction.save
+        if @transaction.save && @user.update(account_balance: new_balance) 
             redirect_to transactions_path
         else
             render :new, status: :unprocessable_entity 
@@ -36,5 +39,11 @@ class TransactionsController < ApplicationController
     def is_current_user
         @transaction = current_user.transactions.find_by(id: params[:user_id])
     end
+
+
+    # def user_params        
+    #     params.require(current_user).permit(:email, :password, :first_name, :last_name, :bank_name, :bank_account_number, :account_balance)
+    # end 
+
 
 end
