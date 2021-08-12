@@ -43,10 +43,9 @@ class StocksController < ApplicationController
         @outstanding_shares = @key_stats.shares_outstanding
 
         @count_shares = params[:count_shares]
-        @result = @count_shares.to_f * @current_price.to_i
+        @result = @count_shares.to_i * @current_price.to_f
 
         @confirmation_message = "You are about to purchase #{@count_shares} share/s for $#{@result}."
-
         render :index
     end
 
@@ -64,6 +63,8 @@ class StocksController < ApplicationController
         @total_price = @count_shares*@latest_price
     end
 
-
+    def user_params        
+        params.require(:user).permit(:email, :password, :first_name, :last_name, :bank_name, :bank_account_number, :account_balance)
+      end 
 
 end

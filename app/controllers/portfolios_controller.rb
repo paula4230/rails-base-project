@@ -24,7 +24,7 @@ class PortfoliosController < ApplicationController
         @current_market_price = @quote.latest_price
 
         @count_shares = params[:count_shares] 
-        @result = @count_shares.to_f * @current_market_price.to_i
+        @result = @count_shares.to_i * @current_market_price.to_f
 
         #compute profit per sold share
         # @transactions = current_user.transactions
@@ -39,8 +39,11 @@ class PortfoliosController < ApplicationController
 
         if @transactions.where(stock_symbol: transaction_params[:stock_symbol]).count > 0
             @transaction = current_user.transactions.create(transaction_params)
+            @user = User.where(id: current_user.id)
 
-            if @transaction.save
+            new_balance = current_user.account_balance + transaction_params[:total_price].to_f
+
+            if @transaction.save && @user.update(account_balance: new_balance) 
                 redirect_to transactions_path
             else
                 render :new, status: :unprocessable_entity 
@@ -63,6 +66,7 @@ class PortfoliosController < ApplicationController
     end
     
     def compute_total_price
+
         @total_price = @count_shares*@latest_price
     end
 
@@ -77,7 +81,7 @@ class PortfoliosController < ApplicationController
     end
 
     def transaction_params        
-        params.require(:transaction).permit(:stock_name, :stock_symbol, :current_price, :count_shares, :total_price, :user_id)
+        params.require(:transaction).permit(:stock_name, :stock_symbol, :current_price, :count_shares, :total_price, :user_id, :latest_price)
     end  
 
 

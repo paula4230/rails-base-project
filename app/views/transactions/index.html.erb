@@ -1,4 +1,5 @@
 <%= render '/portfolios/shared' %>
+<%= current_user.account_balance %>
 
 <% @transactions.each do |t| %>
     <p><%= t.stock_name %></p>
@@ -7,3 +8,5 @@
     <p><%= t.count_shares %> shares </p>
     <p> for <%= t.total_price %></p>
 <% end %>
+
+
