@@ -27,10 +27,24 @@
     
 
   <%else%>
+    <div class = 'user-list-page'>
+    <div class = 'admin-header'>
+    Users Log
+    </div>
+    <br>
     <% @users.each do |user| %>
+    
+    <div class = 'admin_user'>
+      <div class = 'user-email-a'>
       <%= user.email %>
-      <%= user.admin %>
+      </div>
+      <div class = 'user-admin-a'>
+      Admin:  <%= user.admin %>
+      </div>
+    </div>
+    
     <%end%>
+    </div>
 
   <%end%>
 

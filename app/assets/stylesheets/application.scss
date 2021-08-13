@@ -406,4 +406,47 @@ a:hover{
     border-radius: 3vmin;
 }
 
+.user-list-page{
+    color: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height: 40vmin;
+    font-size: 2.5vmin;
+    margin-top: 3vmin
+    
+}
+.admin_user{
+    display:flex;
+    flex-direction: row;
+    width: 150vmin;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.user-admin-a{
+    width:30vmin;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center
+}
+
+.user-email-a{
+    width:42vmin;
+    display:flex;
+    flex-direction: row;
+}
+
+.admin-header{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vmin;
+    font-weight: bold;
+    margin-top: 3vmin
+}
 
