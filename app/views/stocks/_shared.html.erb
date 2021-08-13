@@ -2,11 +2,24 @@
     <div id="home">
         <%= link_to 'Home', root_path %>
     </div> 
+  <div class="user_details_stock">
+    <div class="each-user-detail">
+      <span> 
+      <%= current_user.first_name %> 
+      <%= current_user.last_name %>
+      <div id= "user_balance">
+      </span> 
+      <span>
+      Account Balance: 
+      </span> 
+        <span class="each-user-detail"> <%= current_user.account_balance %> </span> 
+    </div> 
 
     <div id="find_stock">
-      <%= link_to 'Portfolio', portfolios_path %>    
-      <%= link_to 'Transactions', transactions_path %>  
-    </div>   
+      <%= link_to 'Portfolio', portfolios_path, class:'a-link' %>    
+      <%= link_to 'Transactions', transactions_path, class:'a-link' %>  
+    </div>  
+  </div>   
 </div>
 
 

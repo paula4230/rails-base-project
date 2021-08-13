@@ -1,12 +1,19 @@
+
 <%= render '/portfolios/shared' %>
-<%= current_user.account_balance %>
 
 <% @transactions.each do |t| %>
-    <p><%= t.stock_name %></p>
-    <p><%= t.stock_symbol %></p>
-    <p><%= t.current_price %></p>
-    <p><%= t.count_shares %> shares </p>
-    <p> for <%= t.total_price %></p>
+<div class='each_transaction'>
+    <div class ='each-transaction-details'>
+    <p><%= t.stock_name %> (<%= t.stock_symbol %>)</p>
+    <%if t.current_price.to_f != 0.00%>
+    <p>Priced At: <%= t.current_price.to_f.round(2) %></p>
+    <% end %>
+    <%if t.latest_price.to_f != 0.00%>
+    <p>Priced At: <%= t.latest_price.to_f.round(2) %></p>
+    <% end %>
+    <p><%= t.count_shares %> shares for <%= t.total_price.round(2) %> </p>
+    </div>
+</div>
 <% end %>
 
 

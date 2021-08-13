@@ -1,26 +1,30 @@
-Hi
-
 <%= render '/stocks/shared' %>
+<div class="stock-home">
+<div class="stock-home-form">
+    <%= render '/stocks/form' %>
+    <br>
+    <br>
+    <%= render '/stocks/pre-transact_stock' %>
 
-<%= render '/stocks/form' %>
-
+    <div>
+    <%= @confirmation_message %>
+    </div>
+    <br>
+    <br>
+    <%= render '/transactions/form', @transaction%>
+</div>
+<div class= 'post_search'>
 <div class='stock_info'>
     <p><%= @company_symbol %></p>
     <p><%= @company_name %></p>
     <p><%= @current_price %></p>
-    <p><%= @change_percent_s %></p>
-    <p><%= @outstanding_shares %></p>       
+    <p> <%= @change_percent_s %></p>
+    <p> <%= @outstanding_shares %></p>       
 
     <% if flash[:alert] %>
         <div class="alert alert-warning"><%= flash[:alert] %></div>
     <% end %>
 </div>
 
-<%= render '/stocks/pre-transact_stock' %>
-
-
-<%= @confirmation_message %>
-
-<%= render '/transactions/form', @transaction%>
-
-<div class="mx-auto mt-5" style="width: 400px"></div>
+</div>
+</div>

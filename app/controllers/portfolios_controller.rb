@@ -40,7 +40,6 @@ class PortfoliosController < ApplicationController
         if @transactions.where(stock_symbol: transaction_params[:stock_symbol]).count > 0
             @transaction = current_user.transactions.create(transaction_params)
             @user = User.where(id: current_user.id)
-
             new_balance = current_user.account_balance + transaction_params[:total_price].to_f
 
             if @transaction.save && @user.update(account_balance: new_balance) 

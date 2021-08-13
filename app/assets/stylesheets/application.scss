@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0
+}
+
+body{
+    background: image-url('black.jpg') no-repeat center center; 
+    background-size: cover;
+    height: 95vmin;
+    background-attachment: fixed;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.a-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.a-link:hover{
+    color: black;
+}
+
+input[type="submit" i], .btn-success{
+    padding: 0vmin;
+    text-align: center;
+    width: 15vmin;
+    height: 4vmin;
+    background-color:black;
+    color: white;
+    border-width: 0;
+    border-radius: 0.5vmin;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    font-size: 2vmin;
+}
+
+a:hover{
+    color: rgb(35, 164, 220);
+    font-weight: bold;
+}
+
+
+/* #portfolios */
+
+.portfolios{
+    display:flex;
+    flex-direction: row;
+}
+
+.portfolio_table{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 170vmin;
+}
+
+.portfolio_table_contents{
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    margin-top: 3vmin;
+}
+
+.portfolio_table_contents_body{
+    width: inherit;
+    display:flex;
+    flex-direction: column;
+    color: white
+}
+
+.portfolio_table_headers{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vmin;
+
+}
+
+.pth{
+    width: 30vmin;
+    font-size: 3.5vmin;
+    display:flex;
+    justify-content: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 1vmin;
+}
+
+.portfolio_details{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ptd{
+    width: 30vmin;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.5vmin;
+}
+
+.ptd_each{
+    padding-top: 2.5vmin;
+}
+
+.portfolio-forms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vmin;
+}
+
+.portfolio-forms-content{
+    display: flex;
+    flex-direction: column;
+    color:white
+}
+
+/* transaction */
+
+.each_transaction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* user-log forms */
+
+.user_reg_forms{
+    display:flex;
+    flex-direction: row;
+    height: 100vmin;
+}
+
+.words{
+    width: 100vmin;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60vmin;
+}
+
+.app{
+    font-size: 15vmin;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+.user_create_forms{
+    width: 33vmin;
+    display:flex;
+    flex-direction: column;
+    padding-left: 3vmin;
+    background-color: gray;
+    opacity: 0.6;
+    justify-content: center;
+    margin-right: 3vmin;
+}
+
+.user_options_logout{
+    display:flex;
+    justify-content: right;
+}
+
+.user_options_home{
+    display:flex;
+    height:55vmin;
+    justify-content: center;
+    align-items: center;
+}
+
+.new_session{
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+#logout{
+    display:flex;
+    justify-self: right;
+}
+
+.f.header-sesh{
+    font-weight: bolder;
+    color: white;
+}
+
+.form-blank-input{
+    width: 25vmin;
+}
+
+.actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vmin;
+}
+
+.to_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vmin;
+    flex-direction: column;
+}
+
+.home_page{
+    height: 80vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vmin
+}
+
+.home_page_contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vmin;
+    width: 150vmin;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.find_stock{
+    width:150vmin;
+    height: 50vmin;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_details{
+    height: 15vmin;
+    margin-right: 3vmin;
+    margin-left: 3vmin;
+    color: white;
+    font-size: 3vmin;
+}
+
+.user_details_stock{
+    height: 15vmin;
+    color: white;
+    font-size: 3vmin;
+}
+
+.each-user-detail{
+    font-weight: bold;
+    margin-left: 3vmin;
+}
+
+.each_tab{
+    width: 35vmin;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vmin;
+    margin: 6vmin;
+    border-radius: 4vmin;
+    font-size: 4vmin;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.find_stock_options{
+    padding-top: 2.5vmin;
+    font-size: 6vmin;
+    width: 40vmin;
+    text-align: center;
+    height: 15vmin;
+    border-radius: 5vmin;
+    color: white
+}
+
+#h_find_stock:hover, #h_portfolio:hover, #h_transaction:hover{
+    height: 15.5vmin;
+    width: 41vmin;
+}
+
+
+#home_page_header{
+    height: 15vmin;
+    padding-top: 9vmin
+}
+
+#h_find_stock{
+    background-color: white;
+    color:black
+}
+
+#h_portfolio{
+    background-color: gray;
+    color:white
+}
+
+#h_transaction{
+    background-color: black;
+    color:white
+}
+
+.white-text{
+    color: white;
+}
+
+.white-text:hover{
+    color: white;
+}
+
+/* stocks page */
+.main_stock_page{
+    margin-left: 5vmin;
+}
+
+.stock_page{
+    height: 80vmin;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-control{
+    width: 25vmin;
+    height: 3.5vmin
+}
+
+.stock_search_form{
+    margin-top: 3vmin;
+    width: 40vmin
+}
+
+.stock-transact-container{
+    width:100vmin;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vmin
+}
+
+.post_search{
+    width: 1750vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.stock_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vmin;
+    padding-top: 3vmin;
+    font-size: 4vmin;
+    font-weight: bold;
+    width: 100vmin
+}
+
+#c_symbol{
+    font-size: 5vmin;
+    font-weight: bold
+} 
+
+.stock-home{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2vmin;
+    margin-top: 3vmin;
+    color: white
+}
+
+.button-succes{
+    color: #fff;
+    font-weight: bold;
+    background-color:black;
+    border-color: 0.4px solid white;
+    margin-top: 2vmin;
+    width: 20vmin;
+    border-radius: 1vmin;
+}
+
+.stock-home-form{
+    width: 30vmin;
+}
+
+.each-transaction-details{
+    width: 70vmin;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    opacity: 0.7;
+    margin:2vmin;
+    border-radius: 3vmin;
+}
+
+

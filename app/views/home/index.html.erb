@@ -1,16 +1,30 @@
 <% if current_user %>
 
   <% if current_user.admin == false %>
-    <div class="user_options">
-      <div id="find_stock">
-      <%= link_to 'Find Stock', stocks_path %>    
-      <%= link_to 'Portfolio', portfolios_path %>    
-      <%= link_to 'Transactions', transactions_path %>   
+    <div class="user_details">
+    <div class="each-user-detail">
+      <span>
+      Welcome,
+      </span> 
+      <%= current_user.first_name %> 
+      <%= current_user.last_name %>
+      <div id= "user_balance">
+      <span>
+      Account Balance: 
+      </span> 
+        <span class="each-user-detail"> <%= current_user.account_balance %> </span> 
+      </div> 
+      </div> 
+    </div> 
+
+    <div class="user_options_home">
+      <div class="find_stock">
+      <%= link_to 'Find Stock', stocks_path, class:"each_tab", id:"h_find_stock" %>    
+      <%= link_to 'Portfolio', portfolios_path, class:"each_tab", id:"h_portfolio" %>    
+      <%= link_to 'Transactions', transactions_path, class:"each_tab", id:"h_transaction" %>   
       </div>  
     </div>
-    <div id="account_balance">
-      <%= current_user.account_balance %>
-    </div> 
+    
 
   <%else%>
     <% @users.each do |user| %>
@@ -25,4 +39,5 @@
 <%= link_to 'Login', new_user_session_path %>
 <%end%>
 
+<%= render 'layouts/alerts' %>
 

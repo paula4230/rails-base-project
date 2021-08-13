@@ -59,33 +59,38 @@
     </table>
   </div>
 
-
+  <div class= 'stock-home-form'>
   <div class= 'portfolio-forms'>
     <div class= 'portfolio-forms-content'>
-      <p>
+      <div>
       <%= 'Sell Stock' %>
-      </p>
+      </div>
 
-      <p>
+      <br>
+
+      <div>
       <%= render '/portfolios/sell_calculation', @transaction%>
-      </p>
+      </div>
 
-      <p>
+      <div>
       Current Market Price: <%= @current_market_price%>
-      </p>
+      </div>
 
 
       <% @count_shares%>
 
-      <p>
-      Total Ask Price: <%= @result %>
-      </p>
+      <div>
+      Total Price: <%= @result %>
+      </div>
 
       <% @price_at_purchase%>
       <% @profit %>
-
+      <br>
+      <div class="stock-home-form">
       <%= render '/portfolios/sell_form', @transaction%>
+      </div>
     </div>
+  </div>
   </div>
 
 </div>
