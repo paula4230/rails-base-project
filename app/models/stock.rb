@@ -1,10 +1,10 @@
 class Stock < ApplicationRecord
-    require 'iex-ruby-client'
-    import 'requests'
+    # require 'iex-ruby-client'
+    # import 'requests'
     
 
-    include IEX
-    'https://cloud.iexapis.com/v1'
+    # include IEX
+    # 'https://cloud.iexapis.com/v1'
 
     
 end
