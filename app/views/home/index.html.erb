@@ -32,8 +32,9 @@
     Users Log
     </div>
     <br>
-    <% @users.each do |user| %>
     
+    <% @users.each do |user| %>
+    <% if user.admin == false%>
     <div class = 'admin_user'>
       <div class = 'user-email-a'>
       <%= user.email %>
@@ -42,7 +43,7 @@
       Admin:  <%= user.admin %>
       </div>
     </div>
-    
+    <%end%>
     <%end%>
     </div>
 
